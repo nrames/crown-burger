@@ -13,9 +13,9 @@ class Locations extends React.Component {
         return this.props.locations.map( location => {
             return(
             <Card>
-                <Card.Content>
-                    {location.name}
-                </Card.Content>
+            <Card.Content>
+                {location.name}
+            </Card.Content>
             </Card>
             )
         })
