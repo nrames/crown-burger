@@ -1,7 +1,7 @@
 class Api::CartsController < ApplicationController
   
-
   def index
+    binding.pry
     render json: Cart.all
   end
   def show
@@ -27,6 +27,6 @@ class Api::CartsController < ApplicationController
   end
   private
     def cart_params
-      params.require(:cart).permit(:price, :description, :image)
+      params.require(:cart).permit(:name)
     end
 end

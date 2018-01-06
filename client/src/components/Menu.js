@@ -37,7 +37,7 @@ class Menu extends Component {
         <Segment basic>
           <Header textAlign='center' as='h1'>Menu</Header>
           <Card.Group stackable itemsPerRow={4}>
-          {this.displayProducts() }
+            {this.displayProducts() }
           </Card.Group>
         </Segment>
       </Container>
