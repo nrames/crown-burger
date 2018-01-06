@@ -6,12 +6,16 @@ import {
   Segment, 
   Image, 
   Icon,
-  Container, 
+  Container,
+  Button, 
 } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { fetchProducts } from '../actions/products';
 import Burger from '../images/burger.jpg'
 import axios from 'axios';
+import Product from './Product';
+
+let cartChoices = []
 
 class Menu extends Component {
 
@@ -22,20 +26,7 @@ class Menu extends Component {
   displayProducts = () => {
     return this.props.products.map( product => {
       return(
-        <Card>
-          <Image src={Burger} />
-          <Card.Content>
-            <Card.Header>
-              {product.title}
-            </Card.Header>
-            <Card.Description>
-              {product.description}
-            </Card.Description>
-          </Card.Content>
-          <Card.Content extra>
-            $ {product.price}
-          </Card.Content>
-        </Card>
+        <Product key={product.id} {...product} />
       );
     })
   }
@@ -58,6 +49,7 @@ const mapStateToProps = (state) => {
   return {
     products: state.products,
     user: state.user,
+    cart: state.cart,
   }
 }
 
