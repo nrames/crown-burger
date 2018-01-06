@@ -11,20 +11,21 @@ import {
 } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import Burger from '../images/burger.jpg';
-import { fetchProducts } from '../actions/products';
+import { 
+  fetchProducts, 
+  addToCart, 
+  editProduct, 
+  deleteProduct, 
+} from '../actions/products';
 import product from './Product';
+import axios from 'axios';
 
 // let cartChoices = []
 
 class Product extends Component {
-
-  addToCart = () => {
-    this.props.cart.push(this.props.products)
-    console.log(this.props.cart)
-  }
   
   render() {
-    let { title, description, price } = this.props;
+    let { title, description, price, id, dispatch } = this.props;
     return(
       <Card>
         <Image src={Burger} />
@@ -39,7 +40,10 @@ class Product extends Component {
         <Card.Content extra>
           $ {price}
           <hr />
-          <Button onClick={this.addToCart()}>Add to Cart</Button>
+          <Button onClick={ () => dispatch(addToCart(id))}>Add to Cart</Button>
+          <hr />
+          <Button primary onClick={ () => dispatch(editProduct(id))}>Edit</Button>
+          <Button color='red' onClick={ () => dispatch(deleteProduct(id)) }>Delete</Button>
         </Card.Content>
       </Card>
     )
