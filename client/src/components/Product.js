@@ -42,7 +42,7 @@ class Product extends Component {
           <hr />
           <Button onClick={ () => dispatch(addToCart(id))}>Add to Cart</Button>
           <hr />
-          <Button primary onClick={ () => dispatch(editProduct(id))}>Edit</Button>
+          <Button primary>Edit</Button>
           <Button color='red' onClick={ () => dispatch(deleteProduct(id)) }>Delete</Button>
         </Card.Content>
       </Card>
