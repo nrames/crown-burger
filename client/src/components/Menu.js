@@ -10,6 +10,7 @@ import {
 } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { fetchProducts } from '../actions/products';
+import Burger from '../images/burger.jpg'
 import axios from 'axios';
 
 class Menu extends Component {
@@ -22,7 +23,7 @@ class Menu extends Component {
     return this.props.products.map( product => {
       return(
         <Card>
-          <Image src={product.image} />
+          <Image src={Burger} />
           <Card.Content>
             <Card.Header>
               {product.title}
