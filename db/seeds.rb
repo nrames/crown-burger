@@ -11,11 +11,10 @@ Product.create(title: 'Garden Hamburger', price: 5.49 , description: Faker::Lore
 Product.create(title: 'Mushroom Swiss Burger', price: 5.99 , description: Faker::Lorem.sentence)
 Product.create(title: 'Jalepeno Burger', price: 5.99 , description: Faker::Lorem.sentence)
 
-
 10.times do
   Location.create(
-    address:Faker::Address.street_address,
-    phone_number: Faker::Company.duns_number,
+    address: Faker::Address.street_address,
+    phone_number: Faker::PhoneNumber.phone_number,
     name: Faker::Company.name
   )
 end
