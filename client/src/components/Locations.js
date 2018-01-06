@@ -13,9 +13,19 @@ class Locations extends React.Component {
         return this.props.locations.map( location => {
             return(
             <Card>
-            <Card.Content>
+            <Card.Header as='h3' textAlign='center' style={{margin: 20}}>
                 {location.name}
+            </Card.Header>
+            <Card.Content>
+                {location.address}
             </Card.Content>
+            <Card.Meta style={{margin: 20}}>
+                {location.phone_number}
+            </Card.Meta>
+{/*            
+                <div style='width: 800px;'>
+                    <div id="map" style='width: 800px; height: 400px;'></div>
+                </div>  */}
             </Card>
             )
         })
