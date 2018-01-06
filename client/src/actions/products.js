@@ -10,9 +10,11 @@ export const fetchProducts = () => {
     axios.get('/api/products')
       .then( res => {
         dispatch(setProducts(res.data));
+        console.log(res.data)
       })
       .catch( err => {
         dispatch(setFlash('Error fetching inputs. Try again.', 'red'));
+        console.log(err)
     });
   }
 }

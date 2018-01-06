@@ -2,7 +2,7 @@
   Product.create(
     title: Faker::Food.dish,
     price: Faker::Commerce.price,
-    description: Faker::Lorem.sentences(1)
+    description: Faker::Lorem.sentence
   )
 end
 
