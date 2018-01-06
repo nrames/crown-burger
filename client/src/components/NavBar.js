@@ -46,15 +46,12 @@ class NavBar extends Component {
               <Image src={logo_small} size='tiny'/>
             </Menu.Item> 
           </Link>
-<<<<<<< HEAD
           <Link to='/menu'>
             <Menu.Item name='Menu' />
           </Link>    
-=======
           <Link to='/locations'>
             <Menu.Item name='locations' />
           </Link>
->>>>>>> origin/isabel
           { this.rightNavs() }
         </Menu>
       </container>

@@ -11,7 +11,6 @@ import Menu from './Menu';
 import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
-import Menu from './Menu';
 import { Switch, Route } from 'react-router-dom';
 
 class App extends Component {
@@ -23,11 +22,8 @@ class App extends Component {
         <FetchUser>
           <Switch>
             <Route exact path='/' component={Home} />
-<<<<<<< HEAD
             <Route exact path='/menu' component={Menu} />
-=======
             <Route exact path='/locations' component={Locations} />
->>>>>>> origin/isabel
             <AuthRoute exact path='/login' component={Login} />
             <AuthRoute exact path='/register' component={Register} />
             <Route exact path='/menu' component={Menu} />
