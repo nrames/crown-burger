@@ -8,8 +8,8 @@ end
 
 10.times do
   Location.create(
-    address:Faker::Address.street_address,
-    phone_number: Faker::Company.duns_number,
+    address: Faker::Address.street_address,
+    phone_number: Faker::PhoneNumber.phone_number,
     name: Faker::Company.name
   )
 end
