@@ -7,7 +7,6 @@ import Register from './Register';
 import Flash from './Flash';
 import Home from './Home';
 import Cart from './Cart';
-import Menu from './Menu';
 import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
