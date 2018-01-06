@@ -23,8 +23,11 @@ class App extends Component {
         <FetchUser>
           <Switch>
             <Route exact path='/' component={Home} />
+<<<<<<< HEAD
             <Route exact path='/about' component={About} />
             <Route exact path='/menu' component={Menu} />
+=======
+>>>>>>> isabel
             <Route exact path='/locations' component={Locations} />
             <AuthRoute exact path='/login' component={Login} />
             <AuthRoute exact path='/register' component={Register} />
