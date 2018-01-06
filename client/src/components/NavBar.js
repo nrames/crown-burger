@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Image } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { handleLogout } from '../actions/auth';
+import logo_small from '../images/crown-burger-logo-small.png'
 
 class NavBar extends Component {
   rightNavs = () => {
@@ -12,7 +13,10 @@ class NavBar extends Component {
       return (
         <Menu.Menu position='right'>
           <Link to='/cart'>
-            <Menu.Item name='Cart' />
+            <Menu.Item 
+            icon='cart'
+            name='Cart' 
+            />
           </Link>
           <Menu.Item
             name='Logout'
@@ -35,14 +39,19 @@ class NavBar extends Component {
 
   render() {
     return (
-      <div>
-        <Menu pointing secondary>
+      <container>
+        <Menu stackable pointing secondary> 
           <Link to='/'>
-            <Menu.Item name='home' />
+            <Menu.Item>
+              <Image src={logo_small} size='tiny'/>
+            </Menu.Item> 
           </Link>
+          <Link to='/menu'>
+            <Menu.Item name='Menu' />
+          </Link>    
           { this.rightNavs() }
         </Menu>
-      </div>
+      </container>
     );
   }
 }
