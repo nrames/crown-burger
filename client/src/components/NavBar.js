@@ -13,9 +13,9 @@ class NavBar extends Component {
       return (
         <Menu.Menu position='right'>
           <Link to='/cart'>
-            <Menu.Item 
+            <Menu.Item
             icon='cart'
-            name='Cart' 
+            name='Cart'
             />
           </Link>
           <Menu.Item
@@ -40,15 +40,15 @@ class NavBar extends Component {
   render() {
     return (
       <container>
-        <Menu stackable pointing secondary> 
+        <Menu stackable pointing secondary>
           <Link to='/'>
             <Menu.Item>
               <Image src={logo_small} size='tiny'/>
-            </Menu.Item> 
+            </Menu.Item>
           </Link>
           <Link to='/menu'>
             <Menu.Item name='Menu' />
-          </Link>    
+          </Link>
           <Link to='/locations'>
             <Menu.Item name='locations' />
           </Link>
