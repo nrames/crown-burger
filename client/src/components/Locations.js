@@ -1,35 +1,45 @@
 import React from 'react';
 import { Header, Card } from 'semantic-ui-react';
+import { connect } from 'react-redux';
+import { fetchLocations } from '../actions/locations';
 
 class Locations extends React.Component {
+
+    componentDidMount() {
+        this.props.dispatch(fetchLocations());
+    }
+
+    displayLocations = () => {
+        return this.props.locations.map( location => {
+            return(
+            <Card>
+                <Card.Content>
+                    {location.name}
+                </Card.Content>
+            </Card>
+            )
+        })
+    }
 
 
      render() {
         return(
             <div>
               <Header as='h1' textAlign='center'>Locations</Header> 
-              <Card.Group style={{margin: 50}} items={items} />
+              <Card.Group style={{margin: 50}} >
+                { this.displayLocations() }
+              </Card.Group>
             </div>
         );
     }
 }
-const items = [
-    {
-        header: 'Project Report - April',
-        description: 'Leverage agile frameworks to provide a robust synopsis for high level overviews.',
-        meta: 'ROI: 30%',
-    },
-    {
-        header: 'Project Report - May',
-        description: 'Bring to the table win-win survival strategies to ensure proactive domination.',
-        meta: 'ROI: 34%',
-    },
-    {
-        header: 'Project Report - June',
-        description: 'Capitalise on low hanging fruit to identify a ballpark value added activity to beta test.',
-        meta: 'ROI: 27%',
-    },
-]
+    
+const mapStateToProps = (state) => {
+    return{
+        locations: state.locations,
+        user: state.user,
+    }
+}
 
 
-export default Locations;
+export default connect(mapStateToProps)(Locations);
