@@ -1,10 +1,16 @@
-20.times do
-  Product.create(
-    title: Faker::Food.dish,
-    price: Faker::Commerce.price,
-    description: Faker::Lorem.sentences(1)
-  )
-end
+Product.create(title: 'Crown Burger', price: 6.29, description: Faker::Lorem.sentence)
+Product.create(title: 'Junior Crown Burger', price: 5.29 , description: Faker::Lorem.sentence)
+Product.create(title: 'Bacon Cheese Burger', price: 6.29 , description: Faker::Lorem.sentence)
+Product.create(title: 'Jr. Burger', price: 3.49 , description: Faker::Lorem.sentence)
+Product.create(title: 'Hamburger', price: 4.49 , description: Faker::Lorem.sentence)
+Product.create(title: 'Cheeseburger', price: 4.89 , description: Faker::Lorem.sentence)
+Product.create(title: 'DBL Hamburger', price: 5.89 , description: Faker::Lorem.sentence)
+Product.create(title: 'DBL Cheeseburger', price: 6.79 , description: Faker::Lorem.sentence)
+Product.create(title: 'Chili Hamburger', price: 5.99 , description: Faker::Lorem.sentence)
+Product.create(title: 'Garden Hamburger', price: 5.49 , description: Faker::Lorem.sentence)
+Product.create(title: 'Mushroom Swiss Burger', price: 5.99 , description: Faker::Lorem.sentence)
+Product.create(title: 'Jalepeno Burger', price: 5.99 , description: Faker::Lorem.sentence)
+
 
 10.times do
   Location.create(
