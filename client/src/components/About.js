@@ -13,7 +13,6 @@ class About extends Component {
 
         <div class="ui raised segment">
 
-          </img>
             <Header as='h4' textAlign='left'>
               The first Crown Burgers restaurant was opened in 1978 by John &
               Rula Katzourakis and Nick Katsanevas (Rula’s brother).  Later Nick

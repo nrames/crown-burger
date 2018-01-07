@@ -51,13 +51,7 @@ class NavBar extends Component {
           </Link>    
           <Link to='/locations'>
             <Menu.Item name='LOCATIONS' />
-          </Link>
-          <Link to='/locations'>
-            <Menu.Item name='locations' />
-          </Link>
-          <Link to='/menu'>
-            <Menu.Item name='Menu' />
-          </Link>   
+          </Link> 
           <Link to='/about'>
             <Menu.Item name='ABOUT' />
           </Link>  
